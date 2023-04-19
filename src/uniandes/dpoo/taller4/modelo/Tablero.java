@@ -162,15 +162,15 @@ public class Tablero
 	 * 
 	 * @return
 	 */
-	public boolean tableroIluminado()
-	{
-		boolean iluminado = true;
-
-		for (int i = 0; i < tablero.length && iluminado; i++)
-			for (int ii = 0; ii < tablero.length && iluminado; ii++)
-				iluminado = tablero[i][ii];
-
-		return iluminado;
+	public boolean tableroIluminado() {
+	    for (int i = 0; i < tablero.length; i++) {
+	        for (int j = 0; j < tablero[0].length; j++) {
+	            if (!tablero[i][j]) {
+	                return false;
+	            }
+	        }
+	    }
+	    return true;
 	}
 
 	/**
